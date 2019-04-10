@@ -1,6 +1,6 @@
 {
   "name": "rt-imgtocanvas",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "react img-to-canvas component",
   "main": "dist/umd/index.js",
   "scripts": {
