@@ -1,0 +1,60 @@
+{
+  "name": "rt-imgtocanvas",
+  "version": "0.1.0",
+  "description": "react img-to-canvas component",
+  "main": "dist/umd/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --config webpack.dev.config.js",
+    "build": "npm run es && npm run cj && npm run umd",
+    "umd": "webpack --config webpack.config.js",
+    "es": "babel src --out-dir dist/es && cp src/index.less dist/es",
+    "cj": "NODE_ENV=cj babel src --out-dir dist/cj && cp src/index.less dist/cj"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhouYK/react-imgtocanvas.git"
+  },
+  "keywords": [
+    "react",
+    "imgtocanvas"
+  ],
+  "author": "zhouyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZhouYK/react-imgtocanvas/issues"
+  },
+  "homepage": "https://github.com/ZhouYK/react-imgtocanvas#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "peerDependencies": {
+    "react": ">= 1.x"
+  },
+  "files": [
+    "src",
+    "dist/es",
+    "dist/cj",
+    "dist/umd",
+    "package.json"
+  ],
+  "dependencies": {
+    "exif-js": "^2.3.0"
+  }
+}
